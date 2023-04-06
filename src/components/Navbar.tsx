@@ -11,6 +11,8 @@ export function Navbar() {
                     <Nav.Link to='/' as={NavLink}>Home</Nav.Link>
                     <Nav.Link to='/store' as={NavLink}>Store</Nav.Link>
                     <Nav.Link to='/about' as={NavLink}>About</Nav.Link>
+                    <Nav.Link to='/signin' as={NavLink}>Signin</Nav.Link>
+                    <Nav.Link to='/login' as={NavLink}>Login</Nav.Link>
                 </Nav>
                 {/* Cart button */}
                 <Button className="rounded">
