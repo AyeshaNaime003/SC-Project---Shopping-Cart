@@ -6,8 +6,49 @@
 }
 .features .icons{
     font-size: 3rem;
+    margin: 2rem;
 }
 .features p{
     margin: auto;
-    width: 50%;
+    width: 80%;
 }
+.best-products{
+    text-align: center;
+}
+.best-products .icons{
+    font-size: 3rem;
+    margin: 2rem;
+}
+.best-products p{
+    margin: auto;
+    width: 80%;
+}
+.customers-review{
+    background-color: pink;
+}
+.carousel-control-prev, .carousel-control-next {
+    /* background-color:; Change the background color */
+    border-color: #f8f9fa; /* Change the border color */
+    opacity: 0.5; /* Change the opacity */
+  }
+  
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    /* background-color: black; Change the background color on hover */
+    border-color: #f8f9fa; /* Change the border color on hover */
+    opacity: 1; /* Change the opacity on hover */
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    color: black; /* Change the color of the arrow icons */
+  }
+  
+  .carousel-indicators li {
+    background-color: #212529; /* Change the color of the indicator dots */
+  }
+  
+  .carousel-indicators .active {
+    background-color: black; /* Change the color of the active indicator dot */
+  }
+  .best-products img{
+    width: 200px;
+  }
