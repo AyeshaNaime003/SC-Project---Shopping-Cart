@@ -1,0 +1,13 @@
+.banner{
+    width: 100%;
+}
+.features{
+    text-align: center;
+}
+.features .icons{
+    font-size: 3rem;
+}
+.features p{
+    margin: auto;
+    width: 50%;
+}
