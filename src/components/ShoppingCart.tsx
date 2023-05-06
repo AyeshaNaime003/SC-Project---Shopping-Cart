@@ -1,15 +1,16 @@
-import { Offcanvas, Stack } from "react-bootstrap"
+import { Button, Offcanvas, Stack } from "react-bootstrap"
 import { useShoppingCartContext } from "../context/ShoppingCartContext"
 import { formatPrice } from "../utilities/formatPrice"
 import { CartItem } from "./CartItem"
 import storeItems from "../data/items.json"
+import { Link } from 'react-router-dom';
 
 type ShoppingCartProps = {
   isOpen: boolean
 }
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
-  const { closeCart, cartItems } = useShoppingCartContext()
+  const { cartQuantity, closeCart, cartItems } = useShoppingCartContext()
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>
@@ -29,6 +30,11 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
               }, 0)
             )}
           </div>
+          {cartQuantity>0?(
+              <Link to="/payment">
+              <Button className="btn">Proceed to Payment</Button>
+            </Link>
+          ):null}
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>

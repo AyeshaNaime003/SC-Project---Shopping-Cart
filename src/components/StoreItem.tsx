@@ -2,6 +2,9 @@ import { Button, Stack } from "react-bootstrap"
 import { formatPrice } from "../utilities/formatPrice"
 import { useShoppingCartContext } from "../context/ShoppingCartContext"
 
+import "../styles/home.css"; // Import the CSS file
+
+
 type StoreItemProp = {
     id: number, name: string, price: number, imgUrl: string
 }
@@ -27,16 +30,16 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProp) {
             <div className="my-2">
                 {quantity == 0 ?
                     // add to cart button
-                    <Button className="btn" onClick={ ()=>increaseCartQuantity(id) }>Add to Cart</Button>
+                    <Button className="btn pink-button" onClick={ ()=>increaseCartQuantity(id) }>Add to Cart</Button>
                     :
                     // quantity buttons 
                     <Stack>
                         <Stack direction="horizontal" className='text-center'>
-                            <Button onClick={ ()=>increaseCartQuantity(id) }>+</Button>
+                            <Button className='btn pink-button' onClick={ ()=>increaseCartQuantity(id) }>+</Button>
                             <span className="mx-2">{quantity} in Cart</span>
-                            <Button onClick={ ()=>decreaseCartQuantity(id) }>-</Button>
+                            <Button className='btn pink-button' onClick={ ()=>decreaseCartQuantity(id) }>-</Button>
                         </Stack>
-                        <Button className="btn btn-danger my-2" onClick={ ()=>removeFromCart(id) }>Remove</Button>
+                        <Button className="btn btn-dark btn-danger my-2" onClick={ ()=>removeFromCart(id) }>Remove</Button>
                     </Stack>
                 }
             </div>

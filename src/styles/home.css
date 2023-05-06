@@ -1,54 +1,80 @@
+:root {
+  --light-black: #454545;
+  --watermelon-pink: #FF5F9E;
+}
+
+/* banner */
 .banner{
     width: 100%;
 }
+/* features */
 .features{
     text-align: center;
+    color: var(--light-black);
 }
 .features .icons{
     font-size: 3rem;
     margin: 2rem;
+    background-color: var(--watermelon-pink);
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: 50%;
 }
 .features p{
     margin: auto;
     width: 80%;
 }
-.best-products{
-    text-align: center;
-}
-.best-products .icons{
-    font-size: 3rem;
-    margin: 2rem;
-}
-.best-products p{
-    margin: auto;
-    width: 80%;
-}
+/* customer reviews */
 .customers-review{
-    background-color: pink;
+  padding: 5% 0;
+  background-color: var(--watermelon-pink);
+  color: whitesmoke;
+}
+.customers-review p{
+  font-size: 2rem;
+  width: 75%;
+  text-align: center;
+}
+.customers-review h3{
+  font-size: 1rem;
 }
 .carousel-control-prev, .carousel-control-next {
-    /* background-color:; Change the background color */
-    border-color: #f8f9fa; /* Change the border color */
-    opacity: 0.5; /* Change the opacity */
-  }
-  
-  .carousel-control-prev:hover, .carousel-control-next:hover {
-    /* background-color: black; Change the background color on hover */
-    border-color: #f8f9fa; /* Change the border color on hover */
-    opacity: 1; /* Change the opacity on hover */
-  }
-  
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    color: black; /* Change the color of the arrow icons */
-  }
-  
-  .carousel-indicators li {
-    background-color: #212529; /* Change the color of the indicator dots */
-  }
-  
-  .carousel-indicators .active {
-    background-color: black; /* Change the color of the active indicator dot */
-  }
-  .best-products img{
-    width: 200px;
-  }
+   border-color: #f8f9fa;
+}
+/* best products */
+.best-products{
+    text-align: center;
+    color: var(--light-black);
+    padding: 5%;
+}
+.best-products img{
+  width: 100%;
+}
+/* footer */
+footer{
+  background-color: var(--watermelon-pink);
+  padding: 3%;
+  color: whitesmoke;
+  /* padding: auto; */
+}
+footer h3{
+  margin: auto;
+  text-align: center;
+}
+footer div{
+  width: 30%;
+  margin: 1% auto;
+}
+footer .right{
+  float: right;
+}
+/* cart */
+Button.pink-button{
+  background-color: var(--watermelon-pink);
+  border: none;
+}
+Button.pink-button:hover{
+  background-color: transparent;
+  color: var(--watermelon-pink);
+}
+/* store page */
