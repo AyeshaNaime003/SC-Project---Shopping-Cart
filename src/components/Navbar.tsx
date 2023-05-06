@@ -1,4 +1,4 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
+import { Row, Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom"
 import { useShoppingCartContext } from "../context/ShoppingCartContext";
 
@@ -10,10 +10,13 @@ export function Navbar() {
     return (
         <NavbarBs className='bg-light'>
             <Container>
-                {/* links to different pages */}
                 <Nav>
-                    <Nav.Link to='/' as={NavLink}>Home</Nav.Link>
+                {/* links to different pages */}
+                    <Nav.Link to='/' as={NavLink} className="text-center">
+                            <img src="../src/data/assets/logo-background-removed.png" className="logo"/>
+                        </Nav.Link>
                     <Nav.Link to='/store' as={NavLink}>Store</Nav.Link>
+                    <Nav.Link to='/about' as={NavLink}>About</Nav.Link>
                 </Nav>
                 {/* Cart button */}
                 <Button className="rounded pink-button" onClick={openCart} style={{ position: 'relative' }}>
