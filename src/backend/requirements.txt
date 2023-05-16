@@ -1,1 +1,0 @@
-npm install cors mongoose express dotenv
