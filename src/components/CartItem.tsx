@@ -1,17 +1,27 @@
-// import { Stack } from "react-bootstrap"
 import { Button, Stack } from "react-bootstrap"
 import { useShoppingCartContext } from "../context/ShoppingCartContext"
-import storeItems from "../data/items.json"
 import { formatPrice } from "../utilities/formatPrice"
+import { useEffect, useState } from 'react';
+
 
 type CartItemProps={
     id:number
     quantity:number
 }
+
 export function CartItem({id, quantity}:CartItemProps){
-    const {removeFromCart} = useShoppingCartContext()
-    const item = storeItems.find(i => i.id === id)
-    if (item==null) return null
+  const { removeFromCart } = useShoppingCartContext();
+  const [item, setItem] = useState<any>(null);
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/items/${id}`)
+      .then(response => response.json())
+      .then(data => setItem(data))
+      .catch(error => console.log(error));
+  }, [id]);
+
+  if (!item) return null;
+
     function formatCurrency(price: number): import("react").ReactNode {
         throw new Error("Function not implemented.")
     }

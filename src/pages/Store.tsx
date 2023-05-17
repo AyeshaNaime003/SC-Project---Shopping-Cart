@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import { StoreItem } from "../components/StoreItem";
-import storeItems from "../data/items.json"
 
 export function Store() {
+    // 
+    const [storeItems, setStoreItems] = useState([]);
+
+    // 
+    useEffect(() => {
+        fetch('http://localhost:3000/items') // Replace with the appropriate JSON server endpoint
+          .then(response => response.json())
+          .then(data => setStoreItems(data))
+          .catch(error => console.log(error));
+      }, []);
+
+      
     return (
         <>
             <Container className="mt-2 mb-5">
